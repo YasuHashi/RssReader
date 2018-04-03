@@ -15,9 +15,11 @@
 		3DB4BE7520720CCB00E1E9FC /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE7420720CCB00E1E9FC /* Setting.swift */; };
 		3DB4BE7720720DA500E1E9FC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE7620720DA500E1E9FC /* Item.swift */; };
 		3DB4BE79207320EF00E1E9FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */; };
+		FA826A164BA0935B7DE38B4B /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C72DA3A89489F23E2BF41 /* Pods_RssReader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		157C72DA3A89489F23E2BF41 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB4BE5D2071FA4D00E1E9FC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB4BE602071FA4D00E1E9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB4BE652071FA4D00E1E9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		3DB4BE7420720CCB00E1E9FC /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3DB4BE7620720DA500E1E9FC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		91E16149C696881861EBABBF /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
+		F44078466143E9D8DE3EDEC0 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA826A164BA0935B7DE38B4B /* Pods_RssReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				3DB4BE5F2071FA4D00E1E9FC /* RssReader */,
 				3DB4BE5E2071FA4D00E1E9FC /* Products */,
+				502651EF746D7746EDFA5F42 /* Pods */,
+				FEEFE2BF8DCC010FA67F225E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,23 @@
 			path = RssReader;
 			sourceTree = "<group>";
 		};
+		502651EF746D7746EDFA5F42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91E16149C696881861EBABBF /* Pods-RssReader.debug.xcconfig */,
+				F44078466143E9D8DE3EDEC0 /* Pods-RssReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FEEFE2BF8DCC010FA67F225E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157C72DA3A89489F23E2BF41 /* Pods_RssReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DB4BE6F2071FA4D00E1E9FC /* Build configuration list for PBXNativeTarget "RssReader" */;
 			buildPhases = (
+				694146841CC989CBFEAC342B /* [CP] Check Pods Manifest.lock */,
 				3DB4BE592071FA4C00E1E9FC /* Sources */,
 				3DB4BE5A2071FA4C00E1E9FC /* Frameworks */,
 				3DB4BE5B2071FA4C00E1E9FC /* Resources */,
+				D3B20C9649E573B04C4BE805 /* [CP] Embed Pods Frameworks */,
+				2DF4CA022A63AAEB0B8CB6A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DF4CA022A63AAEB0B8CB6A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		694146841CC989CBFEAC342B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B20C9649E573B04C4BE805 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DB4BE592071FA4C00E1E9FC /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		3DB4BE702071FA4D00E1E9FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91E16149C696881861EBABBF /* Pods-RssReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		3DB4BE712071FA4D00E1E9FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F44078466143E9D8DE3EDEC0 /* Pods-RssReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
