@@ -156,6 +156,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eFa-YJ-2Z2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f3N-G9-cg0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Yrm-sd-Zs6">
+                            <connections>
+                                <action selector="addBookmark:" destination="VWh-JP-wgH" id="LeC-oT-cYG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="Rah-1q-j5i" id="fi2-0Y-Qjt"/>
                     </connections>
