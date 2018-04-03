@@ -45,8 +45,22 @@ class ListViewController: UITableViewController {
         
         return cell
     }
+    
+    //一覧からWebView画面へ行く時に呼び出されるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let x = xml else {
+            return
+        }
+        
+        //　選択した項目情報をWebView画面に渡す
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let controller = segue.destination as! DetailViewController
+            controller.item = x.items[indexPath.row]
+        }
+    }
 }
 
+// リストビューのセルクラス
 class ListViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -122,3 +136,5 @@ class ListViewXmlParser: NSObject, XMLParserDelegate {
         completionHandler?()
     }
 }
+
+

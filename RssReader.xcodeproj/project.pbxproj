@@ -14,6 +14,7 @@
 		3DB4BE732071FE2100E1E9FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE722071FE2100E1E9FC /* ListViewController.swift */; };
 		3DB4BE7520720CCB00E1E9FC /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE7420720CCB00E1E9FC /* Setting.swift */; };
 		3DB4BE7720720DA500E1E9FC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE7620720DA500E1E9FC /* Item.swift */; };
+		3DB4BE79207320EF00E1E9FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3DB4BE722071FE2100E1E9FC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3DB4BE7420720CCB00E1E9FC /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3DB4BE7620720DA500E1E9FC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3DB4BE722071FE2100E1E9FC /* ListViewController.swift */,
 				3DB4BE7420720CCB00E1E9FC /* Setting.swift */,
 				3DB4BE7620720DA500E1E9FC /* Item.swift */,
+				3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				3DB4BE7720720DA500E1E9FC /* Item.swift in Sources */,
 				3DB4BE732071FE2100E1E9FC /* ListViewController.swift in Sources */,
+				3DB4BE79207320EF00E1E9FC /* DetailViewController.swift in Sources */,
 				3DB4BE612071FA4D00E1E9FC /* AppDelegate.swift in Sources */,
 				3DB4BE7520720CCB00E1E9FC /* Setting.swift in Sources */,
 			);
