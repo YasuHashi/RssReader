@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DAAFE2E2073458E0082BF2C /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAFE2D2073458E0082BF2C /* BookmarkViewController.swift */; };
 		3DB4BE612071FA4D00E1E9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE602071FA4D00E1E9FC /* AppDelegate.swift */; };
 		3DB4BE662071FA4D00E1E9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB4BE642071FA4D00E1E9FC /* Main.storyboard */; };
 		3DB4BE682071FA4D00E1E9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB4BE672071FA4D00E1E9FC /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		157C72DA3A89489F23E2BF41 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAAFE2D2073458E0082BF2C /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		3DB4BE5D2071FA4D00E1E9FC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB4BE602071FA4D00E1E9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB4BE652071FA4D00E1E9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				3DB4BE7420720CCB00E1E9FC /* Setting.swift */,
 				3DB4BE7620720DA500E1E9FC /* Item.swift */,
 				3DB4BE78207320EF00E1E9FC /* DetailViewController.swift */,
+				3DAAFE2D2073458E0082BF2C /* BookmarkViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				3DB4BE732071FE2100E1E9FC /* ListViewController.swift in Sources */,
 				3DB4BE79207320EF00E1E9FC /* DetailViewController.swift in Sources */,
 				3DB4BE612071FA4D00E1E9FC /* AppDelegate.swift in Sources */,
+				3DAAFE2E2073458E0082BF2C /* BookmarkViewController.swift in Sources */,
 				3DB4BE7520720CCB00E1E9FC /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
