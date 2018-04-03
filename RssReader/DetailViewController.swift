@@ -13,7 +13,7 @@ import WebKit
 import RealmSwift
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var webView: WKWebView!
     var item: Item?
     
@@ -34,19 +34,36 @@ class DetailViewController: UIViewController {
     // ブックマークボタンを押した時に呼ばれるメソッド
     @IBAction func addBookmark(_ sender: Any) {
         
-        guard let i = item else {
-            return
+        //　コントローラーの実装
+        let alert = UIAlertController(title:"確認", message: "ブックマークに追加しますか？",preferredStyle: UIAlertControllerStyle.alert)
+        //　ボタンの実装
+        let  okAction = UIAlertAction(title: "OK", style:UIAlertActionStyle.default) {
+            (action: UIAlertAction) in
+            
+            // クリックされた時の処理
+            guard let i = self.item else {
+                return
+            }
+            
+            let bookmark = Bookmark()
+            bookmark.title = i.title
+            bookmark.detail = i.detail
+            bookmark.link = i.link
+            bookmark.date = NSDate()
+            
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(bookmark)
+            }
         }
         
-        let bookmark = Bookmark()
-        bookmark.title = i.title
-        bookmark.detail = i.detail
-        bookmark.link = i.link
-        bookmark.date = NSDate()
+        // CANCELボタンの実装
+        let cancelButton = UIAlertAction(title: "CANCEL", style: UIAlertActionStyle.cancel, handler: nil)
+        //　ボタンの追加
+        alert.addAction(cancelButton)
+        alert.addAction(okAction)
         
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(bookmark)
-        }
+        present(alert, animated: true, completion: nil)
     }
 }
+
