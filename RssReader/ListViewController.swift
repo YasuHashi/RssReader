@@ -9,6 +9,8 @@
 import Foundation
 
 import UIKit
+import Ji
+import SDWebImage
 
 class ListViewController: UITableViewController {
     
@@ -65,11 +67,13 @@ class ListViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    @IBOutlet weak var thumbnail: UIImageView!
+    
     var item: Item? {
         didSet {
             titleLabel.text = item?.title
             descriptionLabel.text = item?.detail
+            thumbnail.sd_setImage(with: item?.imgUrl)
         }
     }
 }
@@ -126,6 +130,7 @@ class ListViewXmlParser: NSObject, XMLParserDelegate {
         case "title": i.title = currentString
         case "description": i.detail = currentString
         case "link": i.link = currentString
+        case "content:encoded":i.jiDoc = Ji(htmlString: currentString)
         case "item": items.append(i)
         default: break
         }

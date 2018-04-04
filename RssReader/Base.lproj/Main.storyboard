@@ -46,33 +46,43 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルタイトルタイトルタイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-nm-qqe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="269" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="iHp-J8-IEz"/>
+                                                <constraint firstAttribute="height" constant="30" id="WZt-Ij-HS2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに内容が入ります。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66j-Af-G5p">
-                                            <rect key="frame" x="0.0" y="30" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="30" width="269" height="60"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FgN-sO-Nda">
+                                            <rect key="frame" x="286" y="0.0" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Tva-Vx-ogp"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="trailing" secondItem="66j-Af-G5p" secondAttribute="trailing" id="6sT-mK-cGu"/>
-                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="leading" secondItem="vbj-F5-Ijj" secondAttribute="leading" id="8zi-NO-AN6"/>
-                                        <constraint firstAttribute="trailing" secondItem="yQq-nm-qqe" secondAttribute="trailing" id="GvO-gG-uBd"/>
-                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="top" secondItem="vbj-F5-Ijj" secondAttribute="top" id="JBy-LP-YaU"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="66j-Af-G5p" secondAttribute="bottom" constant="-11" id="PWu-0f-9b6"/>
-                                        <constraint firstItem="66j-Af-G5p" firstAttribute="top" secondItem="yQq-nm-qqe" secondAttribute="bottom" id="WgJ-Ar-OPr"/>
-                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="leading" secondItem="66j-Af-G5p" secondAttribute="leading" id="eKj-EL-h92"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FgN-sO-Nda" secondAttribute="trailing" constant="-17" id="GMq-R7-RuE"/>
+                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="trailing" secondItem="66j-Af-G5p" secondAttribute="trailing" id="L43-iM-l8y"/>
+                                        <constraint firstItem="66j-Af-G5p" firstAttribute="top" secondItem="yQq-nm-qqe" secondAttribute="bottom" id="NJT-2e-YCZ"/>
+                                        <constraint firstItem="66j-Af-G5p" firstAttribute="bottom" secondItem="FgN-sO-Nda" secondAttribute="bottom" id="TLq-rw-3WE"/>
+                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="top" secondItem="vbj-F5-Ijj" secondAttribute="top" id="UeH-bb-VEN"/>
+                                        <constraint firstItem="FgN-sO-Nda" firstAttribute="leading" secondItem="yQq-nm-qqe" secondAttribute="trailing" constant="17" id="fms-M6-Zpz"/>
+                                        <constraint firstItem="FgN-sO-Nda" firstAttribute="centerY" secondItem="vbj-F5-Ijj" secondAttribute="centerY" id="goH-jE-NtE"/>
+                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="leading" secondItem="66j-Af-G5p" secondAttribute="leading" id="j3V-Sc-gT7"/>
+                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="leading" secondItem="vbj-F5-Ijj" secondAttribute="leading" id="odE-PM-cLS"/>
+                                        <constraint firstItem="yQq-nm-qqe" firstAttribute="top" secondItem="FgN-sO-Nda" secondAttribute="top" id="uch-Ac-efh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="66j-Af-G5p" id="Tyu-sx-UlT"/>
+                                    <outlet property="thumbnail" destination="FgN-sO-Nda" id="12D-ed-ugG"/>
                                     <outlet property="titleLabel" destination="yQq-nm-qqe" id="Dwa-tv-HsH"/>
                                     <segue destination="VWh-JP-wgH" kind="show" id="BOH-7H-DSD"/>
                                 </connections>
@@ -87,7 +97,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3I-3U-ubd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="313"/>
+            <point key="canvasLocation" x="797.60000000000002" y="312.59370314842579"/>
         </scene>
         <!--ブックマーク-->
         <scene sceneID="9v1-hp-N14">
@@ -211,6 +221,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cir-SP-1kr"/>
+        <segue reference="BOH-7H-DSD"/>
     </inferredMetricsTieBreakers>
 </document>
