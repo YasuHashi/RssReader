@@ -22,6 +22,9 @@ class BookmarkViewController: UITableViewController {
         bookmarks = realm.objects(Bookmark.self).sorted(byKeyPath: "date", ascending: false)
         
         tableView.reloadData()
+        
+        // ナビゲーションバーの右側に編集ボタンを追加.
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) ->Int {
@@ -51,4 +54,21 @@ class BookmarkViewController: UITableViewController {
         controller.item = item
         }
     }
+    
+    //Cellを挿入または削除しようとした際に呼び出される
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // 削除のとき.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let realm = try! Realm()
+                
+            // トランザクションを開始してオブジェクトを削除します
+            try! realm.write {
+                realm.delete(bookmarks![indexPath.row])
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
 }
