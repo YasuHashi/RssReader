@@ -50,10 +50,52 @@ class DetailViewController: UIViewController {
             bookmark.detail = i.detail
             bookmark.link = i.link
             bookmark.date = NSDate()
+            bookmark.bookmarkIndex = 0
             
             let realm = try! Realm()
             try! realm.write {
+
                 realm.add(bookmark)
+                
+                let sort = realm.objects(Bookmark.self).filter("detail CONTAINS 'API'")
+                let bookmarkoutOfRange = realm.objects(Bookmark.self).filter("NOT detail CONTAINS 'API'")
+
+                var newBookmarkList = [Bookmark]()
+                
+                var index = 0
+
+                sort.forEach{(data) in
+//                    print(data)
+
+                    let bookmarkSort = Bookmark()
+                    bookmarkSort.title = data.title
+                    bookmarkSort.detail = data.detail
+                    bookmarkSort.link = data.link
+                    bookmarkSort.date = data.date
+                    bookmarkSort.bookmarkIndex = index
+
+                    newBookmarkList += [bookmarkSort]
+                    
+                    index += 1
+                }
+
+                bookmarkoutOfRange.forEach{(data) in
+                    print(data)
+
+                    let bookmarkoutOfRange = Bookmark()
+                    bookmarkoutOfRange.title = data.title
+                    bookmarkoutOfRange.detail = data.detail
+                    bookmarkoutOfRange.link = data.link
+                    bookmarkoutOfRange.date = data.date
+                    bookmarkoutOfRange.bookmarkIndex = index
+
+                    newBookmarkList += [bookmarkoutOfRange]
+                    
+                    index += 1
+                }
+
+                realm.deleteAll()
+                realm.add(newBookmarkList)
             }
         }
         

@@ -15,4 +15,5 @@ class Bookmark: Object {
     @objc dynamic var detail = ""
     @objc dynamic var link = ""
     @objc dynamic var date: NSDate? = nil
+    @objc dynamic var bookmarkIndex = 0
 }

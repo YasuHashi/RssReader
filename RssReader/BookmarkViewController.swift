@@ -19,8 +19,9 @@ class BookmarkViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         let realm = try! Realm()
-        bookmarks = realm.objects(Bookmark.self).sorted(byKeyPath: "date", ascending: false)
-        
+
+        bookmarks = realm.objects(Bookmark.self).sorted(byKeyPath: "bookmarkIndex", ascending: true)
+
         tableView.reloadData()
         
         // ナビゲーションバーの右側に編集ボタンを追加.
@@ -31,6 +32,7 @@ class BookmarkViewController: UITableViewController {
         return bookmarks?.count ?? 0
     }
     
+    //　ブックマークデータの出力処理　　bookmarksに入れた順で表示
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkViewCell", for: indexPath)
         guard let bm = bookmarks?[indexPath.row] else {
