@@ -72,5 +72,25 @@ class BookmarkViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    
+    @IBAction func AllDelete(_ sender: Any) {
+        //　コントローラーの実装
+        let alert = UIAlertController(title:"確認", message: "全て削除しますか？",preferredStyle: UIAlertControllerStyle.alert)
+        //　ボタンの実装
+        let  okAction = UIAlertAction(title: "OK", style:UIAlertActionStyle.default) {
+            (action: UIAlertAction) in
+            
+            let realm = try! Realm()
+            try! realm.write {
+            realm.deleteAll()
+            }
+        }
+            let cancelButton = UIAlertAction(title: "CANCEL", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        //　ボタンの追加
+        alert.addAction(cancelButton)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+
 }

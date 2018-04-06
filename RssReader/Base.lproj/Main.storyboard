@@ -134,7 +134,13 @@
                             <outlet property="delegate" destination="A9g-uP-bhH" id="Jkc-PJ-GyX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ブックマーク" id="eMH-72-W1a"/>
+                    <navigationItem key="navigationItem" title="ブックマーク" id="eMH-72-W1a">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Ec0-LS-zlo">
+                            <connections>
+                                <action selector="AllDelete:" destination="A9g-uP-bhH" id="t4a-1k-pZd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZqJ-CL-3HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,6 +227,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BOH-7H-DSD"/>
+        <segue reference="cir-SP-1kr"/>
     </inferredMetricsTieBreakers>
 </document>

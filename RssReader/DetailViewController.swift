@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
             let request = URLRequest(url: url)
             webView.load(request)
         }
-    }
+    }    
     
     // ブックマークボタンを押した時に呼ばれるメソッド
     @IBAction func addBookmark(_ sender: Any) {
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
         //　ボタンの実装
         let  okAction = UIAlertAction(title: "OK", style:UIAlertActionStyle.default) {
             (action: UIAlertAction) in
-            
+
             // クリックされた時の処理
             guard let i = self.item else {
                 return
@@ -78,9 +78,8 @@ class DetailViewController: UIViewController {
                     
                     index += 1
                 }
-
                 bookmarkoutOfRange.forEach{(data) in
-                    print(data)
+//                    print(data)
 
                     let bookmarkoutOfRange = Bookmark()
                     bookmarkoutOfRange.title = data.title
@@ -92,8 +91,8 @@ class DetailViewController: UIViewController {
                     newBookmarkList += [bookmarkoutOfRange]
                     
                     index += 1
+                    
                 }
-
                 realm.deleteAll()
                 realm.add(newBookmarkList)
             }
