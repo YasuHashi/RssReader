@@ -74,6 +74,7 @@ class ListViewCell: UITableViewCell {
             titleLabel.text = item?.title
             descriptionLabel.text = item?.detail
             thumbnail.sd_setImage(with: item?.imgUrl)
+            thumbnail.contentMode = .scaleAspectFill
         }
     }
 }
